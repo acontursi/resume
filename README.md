@@ -5,13 +5,8 @@ This project is the result of having become a lazy person who does not want to w
 The code is mainly based on R libraries and layout using RMarkdown.
 
 ## License
-CC0-1.0. Note that CC0-1.0 does not grant any trademark permissions.
 
-You're under no legal obligation to do so, but in the spirit of transparency and collaboration these policies are developed and shared with, you're encouraged to:
-
-Share your adapted policies under CC0-1.0 or other open terms.
-Make your adaptations transparent by using a public repo to show changes you've made.
-Let us know how you're using adapted policies.
+This project uses MIT License. Copyright 2023, Adrian Contursi-Reynoso.
 
 ## Disclaimer
 
