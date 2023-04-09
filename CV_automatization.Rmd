@@ -16,11 +16,14 @@ library(glue)
 library(tidyr)
 library(knitr)
 
+# Connect and Download the Google Drive Sheet
 gs4_deauth()
 cv_data <- read_sheet("https://docs.google.com/spreadsheets/d/11t8QEBrF6-aY2Fgm2jB3XCWtutS3OpCHmpzoawU7fbY/edit?usp=sharing")
 cv_data <- data.frame(cv_data)
+
+# Choose the Language for the CV
 cv_data <- cv_data %>%
-  filter(Language == "Spanish")
+  filter(Language == "English") # English or Spanish
 ```
 
 acontursi@ideasphi.com
