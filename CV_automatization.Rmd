@@ -1,9 +1,7 @@
 ---
 title: "ADRIÁN CONTURSI REYNOSO"
 subtitle: "Political and Data Scientist | GIS Developer"
-# author: "Adrián Contursi Reynoso"
 date: "April 2023"
-# Establecer dos columnas
 output: pdf_document
 ---
 
