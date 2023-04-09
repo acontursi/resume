@@ -1,0 +1,146 @@
+---
+title: "ADRIÁN CONTURSI REYNOSO"
+subtitle: "Political and Data Scientist | GIS Developer"
+# author: "Adrián Contursi Reynoso"
+date: "April 2023"
+# Establecer dos columnas
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = 'asis')
+
+# Packages
+library(dplyr)
+library(googlesheets4)
+library(pagedown)
+library(glue)
+library(tidyr)
+library(knitr)
+
+gs4_deauth()
+cv_data <- read_sheet("https://docs.google.com/spreadsheets/d/11t8QEBrF6-aY2Fgm2jB3XCWtutS3OpCHmpzoawU7fbY/edit?usp=sharing")
+cv_data <- data.frame(cv_data)
+cv_data <- cv_data %>%
+  filter(Language == "Spanish")
+```
+
+acontursi@ideasphi.com
+
+[Personal Website](http://www.adriancontursi.com.ar)
+
+Adrián Contursi is a political scientist and data scientist, passionate about the intersection between State, Democracy and New Technologies. 
+
+He has worked for international organizations, mainly in political analysis of the situation and in understanding the impact of social networks on polarization and governance.
+
+He is an academic researcher and professor at the Universidad Nacional del Litoral and the Universidad Autónoma de Entre Ríos, where he teaches Statistics, Social Research, Political and Electoral Geography, and Social Network Analysis Methodology.
+
+
+## EDUCATION
+```{r}
+education <- cv_data %>%
+  filter(Section == "Education") %>%
+  select(Year, Detail, Institution)
+knitr::kable(education)
+```
+
+
+## RESEARCH
+```{r}
+research <- cv_data %>%
+  filter(Section == "Research") %>%
+  select(Year, Position, Detail, Institution)
+knitr::kable(research)
+```
+
+
+## TEACHING
+## Autonomous University of Entre Rios
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "UADER") %>%
+  select(Year, Position, Detail)
+knitr::kable(research)
+```
+
+## National University of the Litoral
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "UNL") %>%
+  select(Year, Position, Detail)
+knitr::kable(research)
+```
+
+## University of Buenos Aires
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "UBA") %>%
+  select(Year, Position, Detail)
+knitr::kable(research)
+```
+
+## Higher Education Institute No. 64 Ana Maria Fonseca
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "IES64") %>%
+  select(Year, Position, Detail)
+knitr::kable(research)
+```
+
+
+## PUBLICATIONS
+## Articles
+```{r}
+articles <- cv_data %>%
+  filter(Type == "Article") %>%
+  select(Year, Author, Detail, Publisher)
+knitr::kable(articles)
+```
+
+## Chapters
+```{r}
+chapters <- cv_data %>%
+  filter(Type == "Chapter") %>%
+  select(Year, Author, Detail, Publisher)
+knitr::kable(chapters)
+```
+
+## Papers at Congress, Conferences and Seminars
+```{r}
+papers <- cv_data %>%
+  filter(Type == "Paper") %>%
+  select(Year, Author, Detail, Event)
+knitr::kable(papers)
+```
+
+
+## COURSES
+## Courses taught
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "Course") %>%
+  select(Year, Detail, Institution, Location)
+knitr::kable(research)
+```
+
+## Specializations
+```{r}
+research <- cv_data %>%
+  filter(Section == "Course") %>%
+  select(Year, Detail, Institution, Location)
+knitr::kable(research)
+```
+
+
+## ACADEMIC EVENTS
+```{r}
+research <- cv_data %>%
+  filter(Section == "Event") %>%
+  select(Year, Event, Institution, Location)
+knitr::kable(research)
+```
