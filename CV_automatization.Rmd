@@ -36,21 +36,19 @@ He has worked for international organizations, mainly in political analysis of t
 
 He is an academic researcher and professor at the Universidad Nacional del Litoral and the Universidad Autónoma de Entre Ríos, where he teaches Statistics, Social Research, Political and Electoral Geography, and Social Network Analysis Methodology.
 
-
 ## EDUCATION
 ```{r}
 education <- cv_data %>%
   filter(Section == "Education") %>%
-  select(Year, Detail, Institution)
+  select(Year, Degree, Institution, Location)
 knitr::kable(education)
 ```
-
 
 ## RESEARCH
 ```{r}
 research <- cv_data %>%
   filter(Section == "Research") %>%
-  select(Year, Position, Detail, Institution)
+  select(Year, Position, Center, Institution, Location)
 knitr::kable(research)
 ```
 
