@@ -52,14 +52,22 @@ research <- cv_data %>%
 knitr::kable(research)
 ```
 
-
 ## TEACHING
+## Latin American Faculty of Social Sciences
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "FLACSO") %>%
+  select(Year, Position, Subject)
+knitr::kable(research)
+```
+
 ## Autonomous University of Entre Rios
 ```{r}
 research <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UADER") %>%
-  select(Year, Position, Detail)
+  select(Year, Position, Subject)
 knitr::kable(research)
 ```
 
