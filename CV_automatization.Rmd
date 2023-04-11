@@ -85,7 +85,7 @@ knitr::kable(research)
 research <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UBA") %>%
-  select(Year, Position, Detail)
+  select(Year, Position, Subject, Location)
 knitr::kable(research)
 ```
 
