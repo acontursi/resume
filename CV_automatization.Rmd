@@ -62,6 +62,24 @@ research <- cv_data %>%
 knitr::kable(research)
 ```
 
+## National Pedagogical University
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "UNIPE") %>%
+  select(Year, Position, Subject, Location)
+knitr::kable(research)
+```
+
+## Franz Tamayo Private University (Bolivia)
+```{r}
+research <- cv_data %>%
+  filter(Section == "Teaching") %>%
+  filter(Type == "UNIFRANZ") %>%
+  select(Year, Position, Subject, Location)
+knitr::kable(research)
+```
+
 ## Autonomous University of Entre Rios
 ```{r}
 research <- cv_data %>%
