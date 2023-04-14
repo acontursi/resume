@@ -55,65 +55,65 @@ knitr::kable(research)
 ## TEACHING
 ## Latin American Faculty of Social Sciences
 ```{r}
-research <- cv_data %>%
+flacso <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "FLACSO") %>%
   select(Year, Position, Subject, Location)
-knitr::kable(research)
+knitr::kable(flacso)
 ```
 
 ## National Pedagogical University
 ```{r}
-research <- cv_data %>%
+unipe <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UNIPE") %>%
   select(Year, Position, Subject, Location)
-knitr::kable(research)
+knitr::kable(unipe)
 ```
 
 ## Franz Tamayo Private University (Bolivia)
 ```{r}
-research <- cv_data %>%
+unifranz <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UNIFRANZ") %>%
   select(Year, Position, Subject, Location)
-knitr::kable(research)
+knitr::kable(unifranz)
 ```
 
 ## Autonomous University of Entre Rios
 ```{r}
-research <- cv_data %>%
+uader <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UADER") %>%
   select(Year, Position, Subject, Location)
-knitr::kable(research)
+knitr::kable(uader)
 ```
 
 ## National University of the Litoral
 ```{r}
-research <- cv_data %>%
+unl <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UNL") %>%
   select(Year, Position, Subject, Location)
-knitr::kable(research)
+knitr::kable(unl)
 ```
 
 ## University of Buenos Aires
 ```{r}
-research <- cv_data %>%
+uba <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "UBA") %>%
   select(Year, Position, Subject, Location)
-knitr::kable(research)
+knitr::kable(uba)
 ```
 
 ## Higher Education Institute No. 64 Ana Maria Fonseca
 ```{r}
-research <- cv_data %>%
+ies64 <- cv_data %>%
   filter(Section == "Teaching") %>%
   filter(Type == "IES64") %>%
-  select(Year, Position, Detail)
-knitr::kable(research)
+  select(Year, Position, Subject, Location)
+knitr::kable(ies64)
 ```
 
 
