@@ -45,10 +45,19 @@ knitr::kable(education)
 ```
 
 ## RESEARCH
+# Membership
 ```{r}
 research <- cv_data %>%
   filter(Section == "Research") %>%
   select(Year, Position, Center, Institution, Location)
+knitr::kable(research)
+```
+
+# Projects
+```{r}
+research <- cv_data %>%
+  filter(Section == "Research_Project") %>%
+  select(Year, Project, Center, Institution, Director, Funding_by, Amount)
 knitr::kable(research)
 ```
 
