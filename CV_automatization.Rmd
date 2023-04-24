@@ -166,6 +166,10 @@ research <- cv_data %>%
 knitr::kable(research)
 ```
 
+
+#¡¡¿¿Qué clasifica como una especialización!!??
+
+
 ## Specializations
 ```{r}
 research <- cv_data %>%
