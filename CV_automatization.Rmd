@@ -38,7 +38,27 @@ He is an academic researcher and professor at the Universidad Nacional del Litor
 
 
 ## WORK EXPERIENCE
-
+```{r}
+gcba <- cv_data %>%
+  filter(Section == "Work_Experience") %>%
+  filter(Type == "GCBA") %>%
+  select(Year, Position, Institution, Center,Location)
+knitr::kable(gcba)
+```
+```{r}
+oas <- cv_data %>%
+  filter(Section == "Work_Experience") %>%
+  filter(Type == "OAS") %>%
+  select(Year, Position, Institution, Center,Location)
+knitr::kable(oas)
+```
+```{r}
+dpv <- cv_data %>%
+  filter(Section == "Work_Experience") %>%
+  filter(Type == "DPV") %>%
+  select(Year, Position, Institution, Center,Location)
+knitr::kable(dpv)
+```
 
 ## EDUCATION
 ```{r}
