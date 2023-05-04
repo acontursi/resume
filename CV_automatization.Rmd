@@ -77,6 +77,8 @@ research <- cv_data %>%
 knitr::kable(research)
 ```
 
+V-Dem Experto pais Argentina
+
 # Projects
 ```{r}
 research <- cv_data %>%
