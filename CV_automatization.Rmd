@@ -201,6 +201,9 @@ knitr::kable(research)
 ```
 
 
+# Incluir formación de RRHH
+
+
 ## ACADEMIC EVENTS
 ```{r}
 research <- cv_data %>%
