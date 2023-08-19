@@ -156,24 +156,27 @@ knitr::kable(ies64)
 ## Articles
 ```{r}
 articles <- cv_data %>%
+  filter(Section == "Publication") %>%
   filter(Type == "Article") %>%
-  select(Year, Author, Detail, Publisher)
+  select(Year, Author, Details, Publisher)
 knitr::kable(articles)
 ```
 
 ## Chapters
 ```{r}
 chapters <- cv_data %>%
+  filter(Section == "Publication") %>%
   filter(Type == "Chapter") %>%
-  select(Year, Author, Detail, Publisher)
+  select(Year, Author, Details, Publisher)
 knitr::kable(chapters)
 ```
 
 ## Papers at Congress, Conferences and Seminars
 ```{r}
 papers <- cv_data %>%
+  filter(Section == "Publication") %>%
   filter(Type == "Paper") %>%
-  select(Year, Author, Detail, Event)
+  select(Year, Author, Details, Event)
 knitr::kable(papers)
 ```
 
